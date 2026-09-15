@@ -3,7 +3,7 @@
 **Junior Back-End Developer**
 
 📧 [erdemaslan473@gmail.com](mailto:erdemaslan473@gmail.com)
-👨‍💻 Computer Programming student at Karadeniz Technical University (Expected graduation: July 2026)
+
 🛠️ Focused on **C#**, **.NET**, **Microsoft SQL Server**, and back-end systems
 🔌 Hands-on experience with Arduino and basic electronics from the national "Kod Adı 2023" project
 🕹️ Contributing to **Space Station 13 (SS13)**, helping out the maintainer team

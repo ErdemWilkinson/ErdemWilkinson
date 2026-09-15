@@ -18,11 +18,18 @@ Junior developer with a strong foundation in software development and electronic
 
 ---
 
+## Experience
+
+**Intern / Contractor — Software Developer**, OME Marketing (Dubai) — *2026*
+- Built "Onaylı Emlak," a real-estate marketplace app using Expo (React Native), Firebase, and iyzico payment integration
+
+---
+
 ## Skills
 
 **Technical**
-- C# • .NET • Python • Java • C++
-- Microsoft SQL Server (design, queries, management)
+- C# • .NET • Python • Java • C++ • Kotlin • TypeScript/JavaScript
+- Microsoft SQL Server (design, queries, management) • Firebase
 - RESTful API development
 - Debugging & problem-solving
 - Basic HTML/CSS
@@ -39,7 +46,6 @@ Junior developer with a strong foundation in software development and electronic
 **Karadeniz Technical University**
 Associate Degree in Computer Programming • Trabzon, Turkey
 
-
 ---
 
 ## Languages
@@ -51,12 +57,14 @@ Associate Degree in Computer Programming • Trabzon, Turkey
 
 ## Projects
 
-Currently developing several academic projects focused on:
-- Desktop applications with C# and .NET
-- Database-driven systems using Microsoft SQL Server
-- REST API development
+**[Shaman](https://github.com/ErdemWilkinson/Shaman)**
+AI-assisted Android health pre-assessment app (Kotlin, Jetpack Compose) where users describe symptoms and get AI-generated, probability-ranked possible conditions in Turkish, using the Claude API and Firebase.
 
-Completed projects, source code, and live demos will be added here soon.
+**[Frp_deneysel](https://github.com/ErdemWilkinson/Frp_deneysel)** — *in progress*
+AI-driven fantasy role-play game companion app (React Native / Expo) with a three-panel UI — character card, live chat, and tactical grid/scene visualizer.
+
+**[evosim](https://github.com/ErdemWilkinson/evosim)**
+Browser-based artificial-life simulation (TypeScript / Vite) where organisms evolve, reproduce, and interact with no fixed evolutionary tree — includes a lineage view, world events, and seed-based planet generation.
 
 ---
 

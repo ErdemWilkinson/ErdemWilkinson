@@ -48,7 +48,6 @@ Currently developing several academic projects focused on:
 - Database-driven systems using Microsoft SQL Server
 - REST API development
 
-Also contributing to the open-source **Space Station 13 (SS13)** codebase, helping the maintainer team with code review and development.
 
 Completed projects, source code, and live demos will be added here soon.
 

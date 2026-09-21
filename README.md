@@ -41,7 +41,7 @@ whisper-specific evaluation and a separate character-level CTC baseline.
 An Android symptom-information prototype built with Kotlin, Jetpack Compose,
 Firebase, and an AI API.
 
-### [Onayli Emlak](https://github.com/ErdemWilkinson)
+### Onayli Emlak — OME Marketing
 
 A real-estate marketplace application built during software-development work
 at OME Marketing, using Expo, Firebase, and iyzico integration.

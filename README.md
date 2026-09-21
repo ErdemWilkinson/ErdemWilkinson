@@ -1,65 +1,83 @@
 # Erdem Aslan
 
-Software developer building practical products across backend systems, mobile
-apps, embedded devices, and applied machine learning.
+**Junior Back-End Developer**
 
-- Based in Turkey
-- Turkish (native) and English (professional working proficiency)
-- Open to junior software-development roles, internships, and collaborative
-  open-source work
+📧 [erdemaslan473@gmail.com](mailto:erdemaslan473@gmail.com)
 
-## Focus
+🛠️ Focused on **C#**, **.NET**, **Microsoft SQL Server**, and back-end systems
 
-- Backend development with C#, .NET, REST APIs, Microsoft SQL Server, and Firebase
-- Mobile development with React Native / Expo and Kotlin / Jetpack Compose
-- Embedded systems with ESP32, ESP-IDF, sensors, and electronics prototyping
-- Applied ML experiments for Turkish OCR and offline voice commands
+🔌 Hands-on experience with Arduino/ESP32 and basic electronics, from the national "Kod Adı 2023" project to building a dual-MCU DIY multi-tool device from scratch
 
-## Selected work
+🕹️ Contributing to **Space Station 13 (SS13)**, helping out the maintainer team
 
-### [Makeshift Flipper](https://github.com/ErdemWilkinson/makeshift-flipper)
+---
 
-An ESP32-P4 + ESP32-C6 handheld for authorized local hardware experiments.
-The project combines a color device UI, RFID/NFC and IR workflows, passive
-Wi-Fi/BLE discovery, diagnostics, host-side tests, and GitHub Actions builds.
-Its repository also documents feature boundaries, privacy considerations, and
-the real-hardware validation plan.
+## About
 
-### [Turkish OCR TinyML](https://github.com/ErdemWilkinson/turkish-ocr-tinyml)
+Junior developer with a strong foundation in software development and electronics. Experienced in building reliable back-end solutions, database design, RESTful APIs, and debugging. Proven ability to work in teams, learn quickly, and deliver practical results — demonstrated through professional sales/tech roles and academic projects. Passionate about writing clean, maintainable code and continuously improving technical skills.
 
-A separate research pipeline for a compact, full-int8 CNN-CTC model that
-recognizes single lines of printed Turkish text. It covers data preparation,
-evaluation, and TFLite export for eventual constrained-device experiments.
+---
 
-### [Turkish ASR Whisper](https://github.com/ErdemWilkinson/turkish-asr-whisper)
+## Experience
 
-Research toward an offline Turkish speech-command recognizer, including
-whisper-specific evaluation and a separate character-level CTC baseline.
+**Intern / Contractor — Software Developer**, OME Marketing (Dubai) — *2026*
+- Built "Onaylı Emlak," a real-estate marketplace app using Expo (React Native), Firebase, and iyzico payment integration
 
-### [Shaman](https://github.com/ErdemWilkinson/Shaman)
+---
 
-An Android symptom-information prototype built with Kotlin, Jetpack Compose,
-Firebase, and an AI API.
+## Skills
 
-### [Onayli Emlak](https://github.com/ErdemWilkinson)
+**Technical**
+- C# • .NET • Python • Java • C++ • Kotlin • TypeScript/JavaScript
+- Microsoft SQL Server (design, queries, management) • Firebase
+- RESTful API development
+- Debugging & problem-solving
+- Basic HTML/CSS
+- Arduino & circuit design
 
-A real-estate marketplace application built during software-development work
-at OME Marketing, using Expo, Firebase, and iyzico integration.
+**Professional**
+- Fast learner • Team collaboration • Adaptability
+- Strong communication • Documentation
 
-### [Evosim](https://github.com/ErdemWilkinson/evosim)
+---
 
-A TypeScript/Vite artificial-life simulation in which organisms reproduce,
-adapt, and interact through emergent systems rather than a fixed evolution
-tree.
+## Education
 
-## Background
+**Karadeniz Technical University**
+Associate Degree in Computer Programming • Trabzon, Turkey
 
-I study Computer Programming at Karadeniz Technical University. My work
-combines clean, maintainable software with hands-on debugging, documentation,
-and electronics prototyping. I also contribute to the Space Station 13
-community.
+---
 
-## Contact
+## Languages
 
-For collaboration or opportunities, reach me at
-[erdemaslan473@gmail.com](mailto:erdemaslan473@gmail.com).
+- Turkish (Native)
+- English (Professional Working Proficiency)
+
+---
+
+## Projects
+
+**[makeshift-flipper](https://github.com/ErdemWilkinson/makeshift-flipper)** — *in progress*
+DIY Flipper Zero-style multi-tool built on a two-MCU ESP32-P4 + ESP32-C6 architecture (ESP-IDF/C). RFID/NFC read and clone (RC522, RDM6300), IR learn/library/transmit, Wi-Fi setup and monitoring, BLE scan, an on-device joystick-driven OLED menu, and a persistent on-device error history — plus a host-side test suite and CI that build both firmwares and run all logic tests on every push.
+
+**[turkish-ocr-tinyml](https://github.com/ErdemWilkinson/turkish-ocr-tinyml)**
+Training pipeline for a compact, full-int8 CNN-CTC TinyML model that reads a single line of printed Turkish text, sized for eventual on-device inference on the makeshift-flipper hardware. Includes synthetic + real-photo dataset generation, a speaker/source-independent evaluation split, and int8 TFLite export.
+
+**[turkish-asr-whisper](https://github.com/ErdemWilkinson/turkish-asr-whisper)**
+Training pipeline for an offline Turkish speech-command recognizer that stays reliable even when commands are whispered — the makeshift-flipper's planned voice-control input. Also includes a from-scratch character-level CTC baseline over Mozilla Common Voice, kept as a separate research comparison from the deployed command classifier.
+
+**[Shaman](https://github.com/ErdemWilkinson/Shaman)**
+AI-assisted Android health pre-assessment app (Kotlin, Jetpack Compose) where users describe symptoms and get AI-generated, probability-ranked possible conditions in Turkish, using the Claude API and Firebase.
+
+**[Frp_deneysel](https://github.com/ErdemWilkinson/Frp_deneysel)** — *in progress*
+AI-driven fantasy role-play game companion app (React Native / Expo) with a three-panel UI — character card, live chat, and tactical grid/scene visualizer.
+
+**[evosim](https://github.com/ErdemWilkinson/evosim)**
+Browser-based artificial-life simulation (TypeScript / Vite) where organisms evolve, reproduce, and interact with no fixed evolutionary tree — includes a lineage view, world events, and seed-based planet generation.
+
+---
+
+## Connect
+
+Feel free to reach out for collaborations, internships, or opportunities.
+Open to feedback and contributions!

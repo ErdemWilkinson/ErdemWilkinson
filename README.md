@@ -1,20 +1,44 @@
 # Erdem Aslan
 
-**Junior Back-End Developer**
+**Embedded & TinyML Developer**
 
-📧 [erdemaslan473@gmail.com](mailto:erdemaslan473@gmail.com)
+🔌 I build firmware for ESP32 hardware in C (ESP-IDF) and train small, quantized models meant to run on it
 
-🛠️ Focused on **C#**, **.NET**, **Microsoft SQL Server**, and back-end systems
+🧠 Current focus: a DIY handheld multi-tool on the ESP32-C6, plus Turkish OCR and voice-command models sized for microcontrollers
 
-🔌 Hands-on experience with Arduino/ESP32 and basic electronics, from the national "Kod Adı 2023" project to building a dual-MCU DIY multi-tool device from scratch
+🌐 I also ship web and mobile apps in TypeScript, Kotlin and React Native
 
-🕹️ Contributing to **Space Station 13 (SS13)**, helping out the maintainer team
+🕹️ Space Station 13 (SS13) player, currently learning the /tg/station codebase
 
 ---
 
 ## About
 
-Junior developer with a strong foundation in software development and electronics. Experienced in building reliable back-end solutions, database design, RESTful APIs, and debugging. Proven ability to work in teams, learn quickly, and deliver practical results — demonstrated through professional sales/tech roles and academic projects. Passionate about writing clean, maintainable code and continuously improving technical skills.
+Junior developer working where software meets hardware. I like projects I can hold in my hand: wiring a board, writing the firmware, and finding out on the real device what actually works. My READMEs state what has been measured or validated and what has not.
+
+Before that I built apps: a real-estate marketplace for a company in Dubai, an Android health pre-assessment app, and two browser-based projects. I started with Arduino and basic electronics in the national "Kod Adı 2023" project.
+
+---
+
+## Projects
+
+**[makeshift-flipper](https://github.com/ErdemWilkinson/makeshift-flipper)** — *working prototype*
+DIY Flipper Zero-style handheld on a single ESP32-C6 (ESP-IDF/C). The display, buttons, joystick-driven menu, and the on-chip Wi-Fi and BLE tools (scan, access point, passive monitor, channel map, BLE radar) run on the real device. RFID and IR drivers are written but not yet validated on assembled hardware. CI builds the firmware and runs host-side logic tests on every push.
+
+**[turkish-ocr-tinyml](https://github.com/ErdemWilkinson/turkish-ocr-tinyml)** — *in progress*
+Training pipeline for a compact, full-int8 CNN-CTC model that reads a single line of printed Turkish text. Covers synthetic and real-photo dataset generation, a source-independent evaluation split, and int8 TFLite export. The model does not meet its accuracy targets yet; the README reports the measured numbers.
+
+**[turkish-asr-whisper](https://github.com/ErdemWilkinson/turkish-asr-whisper)** — *in progress*
+Training pipeline for an offline Turkish voice-command recognizer intended to work with whispered speech. The data contract, recording protocol and speaker-independent split are in place; the command dataset has not been recorded yet. Includes a separate character-level CTC research baseline trained on Mozilla Common Voice.
+
+**[Frp_deneysel](https://github.com/ErdemWilkinson/Frp_deneysel)** — *in progress*
+Single-player D&D RPG with an AI Game Master and a tactical grid (React + Vite, Node.js/Express, Gemini API). Falls back to rule-based template text when no API key is available.
+
+**[evosim](https://github.com/ErdemWilkinson/evosim)**
+Browser-based artificial-life simulation (TypeScript / Vite) where organisms evolve, reproduce and interact with no fixed evolutionary tree. Includes a lineage view, world events and seed-based planet generation.
+
+**[Shaman](https://github.com/ErdemWilkinson/Shaman)**
+AI-assisted Android health pre-assessment app (Kotlin, Jetpack Compose, Firebase, Claude API) that turns described symptoms into ranked possible conditions, in Turkish.
 
 ---
 
@@ -27,17 +51,17 @@ Junior developer with a strong foundation in software development and electronic
 
 ## Skills
 
-**Technical**
-- C# • .NET • Python • Java • C++ • Kotlin • TypeScript/JavaScript
-- Microsoft SQL Server (design, queries, management) • Firebase
-- RESTful API development
-- Debugging & problem-solving
-- Basic HTML/CSS
-- Arduino & circuit design
+**Embedded & ML**
+- C (ESP-IDF) • ESP32 • Arduino & circuit design
+- Python • TensorFlow / TFLite • int8 quantization
+
+**Software**
+- TypeScript/JavaScript • React • Node.js/Express • React Native (Expo)
+- Kotlin (Jetpack Compose) • Firebase
+- C# • .NET • Microsoft SQL Server • Java • C++
 
 **Professional**
-- Fast learner • Team collaboration • Adaptability
-- Strong communication • Documentation
+- Fast learner • Team collaboration • Documentation
 
 ---
 
@@ -55,29 +79,6 @@ Associate Degree in Computer Programming • Trabzon, Turkey
 
 ---
 
-## Projects
-
-**[makeshift-flipper](https://github.com/ErdemWilkinson/makeshift-flipper)** — *in progress*
-DIY Flipper Zero-style multi-tool built on a two-MCU ESP32-P4 + ESP32-C6 architecture (ESP-IDF/C). RFID/NFC read and clone (RC522, RDM6300), IR learn/library/transmit, Wi-Fi setup and monitoring, BLE scan, an on-device joystick-driven OLED menu, and a persistent on-device error history — plus a host-side test suite and CI that build both firmwares and run all logic tests on every push.
-
-**[turkish-ocr-tinyml](https://github.com/ErdemWilkinson/turkish-ocr-tinyml)**
-Training pipeline for a compact, full-int8 CNN-CTC TinyML model that reads a single line of printed Turkish text, sized for eventual on-device inference on the makeshift-flipper hardware. Includes synthetic + real-photo dataset generation, a speaker/source-independent evaluation split, and int8 TFLite export.
-
-**[turkish-asr-whisper](https://github.com/ErdemWilkinson/turkish-asr-whisper)**
-Training pipeline for an offline Turkish speech-command recognizer that stays reliable even when commands are whispered — the makeshift-flipper's planned voice-control input. Also includes a from-scratch character-level CTC baseline over Mozilla Common Voice, kept as a separate research comparison from the deployed command classifier.
-
-**[Shaman](https://github.com/ErdemWilkinson/Shaman)**
-AI-assisted Android health pre-assessment app (Kotlin, Jetpack Compose) where users describe symptoms and get AI-generated, probability-ranked possible conditions in Turkish, using the Claude API and Firebase.
-
-**[Frp_deneysel](https://github.com/ErdemWilkinson/Frp_deneysel)** — *in progress*
-AI-driven fantasy role-play game companion app (React Native / Expo) with a three-panel UI — character card, live chat, and tactical grid/scene visualizer.
-
-**[evosim](https://github.com/ErdemWilkinson/evosim)**
-Browser-based artificial-life simulation (TypeScript / Vite) where organisms evolve, reproduce, and interact with no fixed evolutionary tree — includes a lineage view, world events, and seed-based planet generation.
-
----
-
 ## Connect
 
-Feel free to reach out for collaborations, internships, or opportunities.
-Open to feedback and contributions!
+Open to internships, junior roles and collaborations. The best way to reach me is through GitHub.

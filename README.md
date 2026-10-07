@@ -60,9 +60,6 @@ AI-assisted Android health pre-assessment app (Kotlin, Jetpack Compose, Firebase
 - Kotlin (Jetpack Compose) • Firebase
 - C# • .NET • Microsoft SQL Server • Java • C++
 
-**Professional**
-- Fast learner • Team collaboration • Documentation
-
 ---
 
 ## Education

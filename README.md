@@ -27,7 +27,7 @@ DIY Flipper Zero-style handheld on a single ESP32-C6 (ESP-IDF/C). The display, b
 *License:* MIT
 
 **[turkish-ocr-tinyml](https://github.com/ErdemWilkinson/turkish-ocr-tinyml)** — *in progress*
-Training pipeline for a compact, full-int8 CNN-CTC model that reads a single line of printed Turkish text. Covers synthetic and real-photo dataset generation, a source-independent evaluation split, and int8 TFLite export. The latest float model reads 59.5% of lines exactly on the TS-TR real scene-text test split, against an 80% target, and the int8 export still loses most of that accuracy; the README reports every measured run.
+Training pipeline for a compact, full-int8 CNN-CTC model that reads a single line of printed Turkish text. Covers synthetic and real-photo dataset generation, a source-independent evaluation split, and int8 TFLite export. The latest float model reads 65.1% of lines exactly on the TS-TR real scene-text test split, against an 80% target, and the int8 export still loses about half of its accuracy; the README reports every measured run.
 *License:* MIT for the code. Trained models follow the terms of their training data (CC BY-NC 4.0 and others, see `MODEL_LICENSE.md`).
 
 **[turkish-asr-whisper](https://github.com/ErdemWilkinson/turkish-asr-whisper)** — *in progress*

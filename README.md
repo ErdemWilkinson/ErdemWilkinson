@@ -46,6 +46,10 @@ Open-ended planetary evolution simulation (TypeScript + Canvas 2D, no runtime de
 AI-assisted Android health pre-assessment app (Kotlin, Jetpack Compose, Firebase, Claude API) that turns described symptoms into ranked possible conditions, in Turkish. Built as an academic graduation project.
 *License:* none granted; contact me about terms of use.
 
+**[beamer-pc2](https://github.com/ErdemWilkinson/beamer-pc2)** — *fork*
+Fork of [Beamer](https://github.com/kalkman-code/beamer), which shares one keyboard and mouse across Macs, Windows PCs and Linux machines on the same network. The fork adds sending files, folders and app launches to the other PC so they open there on its own hardware: drag them onto the crossing edge, or right-click → "Open on …". Includes a one-line PowerShell installer for Windows. Everything else is upstream Beamer.
+*License:* GPL-3.0, inherited from upstream.
+
 ---
 
 ## Experience

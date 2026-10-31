@@ -4,7 +4,7 @@
 
 🔌 I build firmware for ESP32 hardware in C (ESP-IDF) and train small, quantized models meant to run on it
 
-🧠 Current focus: a DIY handheld multi-tool on the ESP32-C6, plus Turkish OCR and voice-command models sized for microcontrollers
+🧠 Current focus: tiny int8 models for microcontrollers: InviolusOCR (Turkish line OCR) and voxOCR (a person detector for search-and-rescue drones), plus a DIY handheld multi-tool on the ESP32-C6
 
 🌐 I also ship web and mobile apps in TypeScript, Kotlin and React Native
 
@@ -26,9 +26,13 @@ Before that I built apps: a real-estate marketplace for a company in Dubai, an A
 DIY Flipper Zero-style handheld on a single ESP32-C6 (ESP-IDF/C). The display, buttons, joystick-driven menu, and the on-chip Wi-Fi and BLE tools (scan, access point, passive monitor, channel map, BLE radar) run on the real device. RFID and IR drivers are written but not yet validated on assembled hardware. The latest work is a hole-by-hole perfboard plan and a 3D model for building the modules into one compact stack. CI builds the firmware and runs host-side logic tests on every push.
 *License:* MIT
 
-**[turkish-ocr-tinyml](https://github.com/ErdemWilkinson/turkish-ocr-tinyml)** — *in progress*
-Training pipeline for a compact, full-int8 CNN-CTC model that reads a single line of printed Turkish text. Covers synthetic and real-photo dataset generation, a source-independent evaluation split, and int8 TFLite export. The latest float model reads 65.1% of lines exactly on the TS-TR real scene-text test split, against an 80% target, and the int8 export still loses about half of its accuracy; the README reports every measured run.
-*License:* MIT for the code. Trained models follow the terms of their training data (CC BY-NC 4.0 and others, see `MODEL_LICENSE.md`).
+**[InviolusOCR](https://github.com/ErdemWilkinson/InviolusOCR)** — *in progress* · [model on Hugging Face](https://huggingface.co/inviolus/InviolusOCR)
+A compact, full-int8 model that reads one cropped line of printed Turkish text, sized for microcontrollers: 560,954 parameters, 598 KB as int8 TFLite. Replacing the BiLSTM with a convolutional sequence head (the PP-OCRv3 idea) closed the int8 gap. The int8 file now reads 78.4% of held-out lines and 58.2% of the TS-TR real scene-text test split exactly, against 32–49% for the earlier LSTM versions. The README compares every model version on the same rows. Licence plates are not read yet.
+*License:* MIT for the code. The published model is CC BY-NC-SA 4.0, following its training data (see `MODEL_LICENSE.md`).
+
+**[voxOCR](https://github.com/ErdemWilkinson/voxOCR)** — *first trained version* · [model on Hugging Face](https://huggingface.co/inviolus/voxOCR)
+A tiny person detector for search-and-rescue drones, aimed at the ESP32-S3: 136,547 parameters, 197 KB as int8 TFLite. It is CenterNet-style and anchor-free, trained on the HERIDAL aerial dataset with multi-scale tiles, CopyPaste and quantization-aware training. On the HERIDAL test set the int8 model finds 82.5% of people at a recall-first threshold, with no loss from quantization. It has not been run on a device or on real flight footage yet.
+*License:* MIT for the code, CC BY 4.0 for the weights (HERIDAL, CC BY 3.0).
 
 **[turkish-asr-whisper](https://github.com/ErdemWilkinson/turkish-asr-whisper)** — *in progress*
 Training pipeline for an offline Turkish voice-command recognizer intended to work with whispered speech. The data contract, recording protocol and speaker-independent split are in place; the command dataset has not been recorded yet. Includes a separate character-level CTC research baseline trained on Mozilla Common Voice.
@@ -63,7 +67,7 @@ Beamer shares one keyboard and mouse across Macs, Windows PCs and Linux machines
 
 **Embedded & ML**
 - C (ESP-IDF) • ESP32 • Arduino & circuit design
-- Python • TensorFlow / TFLite • int8 quantization
+- Python • TensorFlow / TFLite • int8 quantization & QAT
 
 **Software**
 - TypeScript/JavaScript • React • Node.js/Express • React Native (Expo)

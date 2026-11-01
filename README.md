@@ -27,11 +27,11 @@ DIY Flipper Zero-style handheld on a single ESP32-C6 (ESP-IDF/C). The display, b
 *License:* MIT
 
 **[InviolusOCR](https://github.com/ErdemWilkinson/InviolusOCR)** — *in progress* · [model on Hugging Face](https://huggingface.co/inviolus/InviolusOCR)
-A compact, full-int8 model that reads one cropped line of printed Turkish text, sized for microcontrollers: 560,954 parameters, 598 KB as int8 TFLite. Replacing the BiLSTM with a convolutional sequence head (the PP-OCRv3 idea) closed the int8 gap. The int8 file now reads 78.4% of held-out lines and 58.2% of the TS-TR real scene-text test split exactly, against 32–49% for the earlier LSTM versions. The README compares every model version on the same rows. Licence plates are not read yet.
+A compact, full-int8 model that reads one cropped line of printed Turkish text, sized for microcontrollers: 560,954 parameters, 598 KB as int8 TFLite. Replacing the BiLSTM with a convolutional sequence head (the PP-OCRv3 idea) closed the int8 gap. The int8 file now reads 78.4% of held-out lines and 58.2% of the TS-TR real scene-text test split exactly, against 32–49% for the earlier LSTM versions. A continuation trained with printed-document lines (2026-11-01) reads 46.5% of a document test set exactly, up from 9.3%, at the same size. The README compares every model version on the same rows. Licence plates are not read yet.
 *License:* MIT for the code. The published model is CC BY-NC-SA 4.0, following its training data (see `MODEL_LICENSE.md`).
 
-**[voxOCR](https://github.com/ErdemWilkinson/voxOCR)** — *first trained version* · [model on Hugging Face](https://huggingface.co/inviolus/voxOCR)
-A tiny person detector for search-and-rescue drones, aimed at the ESP32-S3: 136,547 parameters, 197 KB as int8 TFLite. It is CenterNet-style and anchor-free, trained on the HERIDAL aerial dataset with multi-scale tiles, CopyPaste and quantization-aware training. On the HERIDAL test set the int8 model finds 82.5% of people at a recall-first threshold, with no loss from quantization. It has not been run on a device or on real flight footage yet.
+**[voxOCR](https://github.com/ErdemWilkinson/voxOCR)** — *in progress* · [model on Hugging Face](https://huggingface.co/inviolus/voxOCR)
+A tiny person detector for search-and-rescue drones, aimed at the ESP32-S3: 136,547 parameters, 197 KB as int8 TFLite. It is CenterNet-style and anchor-free, trained on the HERIDAL aerial dataset with multi-scale tiles, CopyPaste and quantization-aware training. On the HERIDAL test set the int8 model finds 83.9% of people at a recall-first threshold with 0.35 false alarms per tile (v3, 2026-11-01), with no loss from quantization. It has not been run on a device or on real flight footage yet.
 *License:* MIT for the code, CC BY 4.0 for the weights (HERIDAL, CC BY 3.0).
 
 **[turkish-asr-whisper](https://github.com/ErdemWilkinson/turkish-asr-whisper)** — *in progress*
@@ -51,7 +51,7 @@ AI-assisted Android health pre-assessment app (Kotlin, Jetpack Compose, Firebase
 *License:* none granted; contact me about terms of use.
 
 **[beamer-pc2](https://github.com/ErdemWilkinson/beamer-pc2)** — *fork of [Beamer](https://github.com/kalkman-code/beamer)*
-Beamer shares one keyboard and mouse across Macs, Windows PCs and Linux machines on the same network. My fork adds sending files, folders and app launches to the other PC so they open there on its own hardware: drag them onto the crossing edge, or right-click → "Open on …". It also includes a one-line PowerShell installer for Windows; everything else is upstream Beamer.
+Beamer shares one keyboard and mouse across Macs, Windows PCs and Linux machines on the same network. My fork adds sending files, folders and app launches to the other PC so they open there on its own hardware (drag them onto the crossing edge, or right-click → "Open on …"), carrying a drag across to the other PC, smoother pointer motion over Wi-Fi, one-click updates from the fork, a Turkish translation and a one-line PowerShell installer for Windows. Everything else is upstream Beamer.
 *License:* GPL-3.0, inherited from upstream.
 
 ---

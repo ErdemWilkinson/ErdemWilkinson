@@ -18,6 +18,7 @@ Finds people in drone images, 197 KB as int8 for the ESP32-S3. It finds 83.9% of
 ## Other projects
 
 - [turkish-asr-whisper](https://github.com/ErdemWilkinson/turkish-asr-whisper): pipeline for offline Turkish voice commands, whispered speech included. The dataset isn't recorded yet.
+- [deneysel_teknik_destek](https://github.com/ErdemWilkinson/deneysel_teknik_destek): a USB support terminal for municipal IT. An ESP32-P4 tells the PC it's plugged in, and the technician opens a repair terminal where an AI agent can only call whitelisted tools and asks before changing anything.
 - [Açık Masa](https://github.com/ErdemWilkinson/Frp_deneysel): an online D&D 5e table for a DM and a player (React, Node.js). Finished.
 - [evosim](https://github.com/ErdemWilkinson/evosim): an evolution simulation you can [play in the browser](https://erdemwilkinson.github.io/evosim/).
 - [Shaman](https://github.com/ErdemWilkinson/Shaman): Android app that ranks possible conditions from symptoms. My graduation project.
@@ -39,4 +40,4 @@ Karadeniz Technical University, Associate Degree in Computer Programming, Trabzo
 
 Turkish (native), English (professional). Outside of code I play Space Station 13.
 
-I'm open to internships, junior roles and collaborations. The easiest way to reach me is here on GitHub.
+I'm open to internships, junior roles, freelance work and collaborations. The easiest way to reach me is here on GitHub.

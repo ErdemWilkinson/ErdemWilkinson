@@ -10,7 +10,7 @@ I started with Arduino in the national "Kod Adı 2023" project. These days I'm w
 A DIY Flipper Zero-style handheld on a single ESP32-C6. The menu and the Wi-Fi and BLE tools run on the device. RFID and IR aren't tested on hardware yet.
 
 **[InviolusOCR](https://github.com/ErdemWilkinson/InviolusOCR)** · [Hugging Face](https://huggingface.co/inviolus/InviolusOCR)
-Reads one line of printed Turkish text. 598 KB as int8, and it reads 78.4% of test lines exactly. There is also a 171 KB version.
+Reads one line of printed Turkish text. 598 KB as int8, and it reads 77.3% of held-out lines exactly (46.5% on printed-document lines, 56.2% on real scene text). There is also a 171 KB version.
 
 **[VoxHOD](https://github.com/ErdemWilkinson/VoxHOD)** · [Hugging Face](https://huggingface.co/inviolus/VoxHOD)
 Finds people in drone images, 197 KB as int8 for the ESP32-S3. It finds 83.9% of the people in the HERIDAL test set. The non-commercial branch [VoxHOD-NC](https://github.com/ErdemWilkinson/VoxHOD-NC) is also trained on Turkish drone footage by Ferhat Tatık ([@ferhattatik_dronoloji](https://www.instagram.com/ferhattatik_dronoloji/)). On that footage it finds 52.2% of people, up from 32.9%.
@@ -39,5 +39,7 @@ Built "Onaylı Emlak", a real-estate app (Expo, Firebase, iyzico).
 Karadeniz Technical University, Associate Degree in Computer Programming, Trabzon
 
 Turkish (native), English (professional). Outside of code I play Space Station 13.
+
+**Licenses:** code is MIT. Model weights keep the terms of their training data: VoxHOD is CC BY 4.0, VoxHOD-NC is CC BY-NC 4.0 and InviolusOCR is CC BY-NC-SA 4.0 (see each MODEL_LICENSE.md).
 
 I'm open to internships, junior roles, freelance work and collaborations. The easiest way to reach me is here on GitHub.

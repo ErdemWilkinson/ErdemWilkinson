@@ -1,100 +1,42 @@
 # Erdem Aslan
 
-**Embedded & TinyML Developer**
+Embedded and TinyML developer. I write ESP32 firmware in C (ESP-IDF) and train small int8 models that fit on microcontrollers. I also build web and mobile apps.
 
-🔌 I build firmware for ESP32 hardware in C (ESP-IDF) and train small, quantized models meant to run on it
+I started with Arduino in the national "Kod Adı 2023" project. These days I'm working on a Turkish OCR model, a person detector for search-and-rescue drones and a handheld multi-tool on the ESP32-C6. My READMEs say what has been measured and what hasn't.
 
-🧠 Current focus: tiny int8 models for microcontrollers: InviolusOCR (Turkish line OCR) and VoxHOD (a person detector for search-and-rescue drones), plus a DIY handheld multi-tool on the ESP32-C6
+## Main projects
 
-🌐 I also ship web and mobile apps in TypeScript, Kotlin and React Native
+**[makeshift-flipper](https://github.com/ErdemWilkinson/makeshift-flipper)**
+A DIY Flipper Zero-style handheld on a single ESP32-C6. The menu and the Wi-Fi and BLE tools run on the device. RFID and IR aren't tested on hardware yet.
 
-🕹️ Space Station 13 (SS13) player, currently learning the /tg/station codebase
+**[InviolusOCR](https://github.com/ErdemWilkinson/InviolusOCR)** · [Hugging Face](https://huggingface.co/inviolus/InviolusOCR)
+Reads one line of printed Turkish text. 598 KB as int8, and it reads 78.4% of test lines exactly. There is also a 171 KB version.
 
----
+**[VoxHOD](https://github.com/ErdemWilkinson/VoxHOD)** · [Hugging Face](https://huggingface.co/inviolus/VoxHOD)
+Finds people in drone images, 197 KB as int8 for the ESP32-S3. It finds 83.9% of the people in the HERIDAL test set. The non-commercial branch [VoxHOD-NC](https://github.com/ErdemWilkinson/VoxHOD-NC) is also trained on Turkish drone footage by Ferhat Tatık ([@ferhattatik_dronoloji](https://www.instagram.com/ferhattatik_dronoloji/)). On that footage it finds 52.2% of people, up from 32.9%.
 
-## About
+## Other projects
 
-Junior developer working where software meets hardware. I like projects I can hold in my hand: wiring a board, writing the firmware, and finding out on the real device what actually works. My READMEs state what has been measured or validated and what has not.
-
-Before that I built apps: a real-estate marketplace for a company in Dubai, an Android health pre-assessment app, and two browser-based projects. I started with Arduino and basic electronics in the national "Kod Adı 2023" project.
-
----
-
-## Projects
-
-**[makeshift-flipper](https://github.com/ErdemWilkinson/makeshift-flipper)** — *working prototype*
-DIY Flipper Zero-style handheld on a single ESP32-C6 (ESP-IDF/C). The display, buttons, joystick-driven menu, and the on-chip Wi-Fi and BLE tools (scan, access point, passive monitor, channel map, BLE radar) run on the real device. RFID and IR drivers are written but not yet validated on assembled hardware. The latest work is a hole-by-hole perfboard plan and a 3D model for building the modules into one compact stack. CI builds the firmware and runs host-side logic tests on every push.
-*License:* MIT
-
-**[InviolusOCR](https://github.com/ErdemWilkinson/InviolusOCR)** — *in progress* · [model on Hugging Face](https://huggingface.co/inviolus/InviolusOCR)
-A compact, full-int8 model that reads one cropped line of printed Turkish text, sized for microcontrollers: 560,954 parameters, 598 KB as int8 TFLite. Replacing the BiLSTM with a convolutional sequence head (the PP-OCRv3 idea) closed the int8 gap. The int8 file now reads 78.4% of held-out lines and 58.2% of the TS-TR real scene-text test split exactly, against 32–49% for the earlier LSTM versions. A continuation trained with printed-document lines (2026-11-01) reads 46.5% of a document test set exactly, up from 9.3%, at the same size. A half-width tiny variant (144,330 parameters, 171 KB int8) reads 64.4% of held-out lines exactly. The README compares every model version on the same rows. Licence plates are not read yet.
-*License:* MIT for the code. The published model is CC BY-NC-SA 4.0, following its training data (see `MODEL_LICENSE.md`).
-
-**[VoxHOD](https://github.com/ErdemWilkinson/VoxHOD)** — *in progress* · [model on Hugging Face](https://huggingface.co/inviolus/VoxHOD)
-A tiny person detector for search-and-rescue drones, aimed at the ESP32-S3: 136,547 parameters, 197 KB as int8 TFLite. It is CenterNet-style and anchor-free, trained on the HERIDAL aerial dataset with multi-scale tiles, CopyPaste and quantization-aware training. On the HERIDAL test set the int8 model finds 83.9% of people at a recall-first threshold with 0.35 false alarms per tile (v3, 2026-11-01), with no loss from quantization. A smaller nano version is 75 KB. It has not been run on a device yet.
-*License:* MIT for the code, CC BY 4.0 for the weights (HERIDAL, CC BY 3.0).
-
-**[VoxHOD-NC](https://github.com/ErdemWilkinson/VoxHOD-NC)** — *experimental, v0* · [model on Hugging Face](https://huggingface.co/inviolus/VoxHOD-NC)
-Non-commercial branch of VoxHOD, trained with extra Turkish drone footage by Ferhat Tatık ([@ferhattatik_dronoloji](https://www.instagram.com/ferhattatik_dronoloji/)), used with his permission. People in the footage were boxed automatically by a large COCO detector, without manual review. On three held-out videos the int8 model finds 52.2% of those people, against 32.9% for VoxHOD v3, and stays within 2 points of v3 on HERIDAL. Precision on the new footage is still low (6–9%). Same 197 KB architecture; the footage itself is not published.
-*License:* CC BY-NC 4.0 for the weights, non-commercial use only. For commercial use, VoxHOD was never trained on this footage.
-
-**[turkish-asr-whisper](https://github.com/ErdemWilkinson/turkish-asr-whisper)** — *in progress*
-Training pipeline for an offline Turkish voice-command recognizer intended to work with whispered speech. The data contract, recording protocol and speaker-independent split are in place; the command dataset has not been recorded yet. Includes a separate character-level CTC research baseline trained on Mozilla Common Voice.
-*License:* MIT for the code. Trained models follow the terms of their training data (see `MODEL_LICENSE.md`).
-
-**[Açık Masa](https://github.com/ErdemWilkinson/Frp_deneysel)** — *complete*
-Web table where a DM and a player join from different places to play D&D 5e. The DM builds encounters or has them generated by region; monsters and their attacks run on SRD 5.1 rules, and all 366 SRD monsters are translated into Turkish. React + Vite, Node.js/Express, WebSocket, PostgreSQL (Supabase), with optional character-sheet reading through the DeepSeek API. The project is finished and no further development is planned; all 535 tests pass.
-*License:* no license is granted for the project code. Includes material from the System Reference Document 5.1 by Wizards of the Coast LLC, licensed under CC BY 4.0.
-
-**[evosim](https://github.com/ErdemWilkinson/evosim)** — *[play in the browser](https://erdemwilkinson.github.io/evosim/)*
-Open-ended planetary evolution simulation (TypeScript + Canvas 2D, no runtime dependencies). Each seed generates a planet with its own chemistry; life starts from a single cell with no organs, and organs, feeding, organisation and behaviour change through mutation and selection. Includes a lineage view, world events, a guided tour for first-time players, and Turkish and English text. It is a teaching model, not a claim about real biology; the README lists where it simplifies.
-*License:* all rights reserved. The repository is public so the game can be hosted and read; you may play it and link to it.
-
-**[Shaman](https://github.com/ErdemWilkinson/Shaman)**
-AI-assisted Android health pre-assessment app (Kotlin, Jetpack Compose, Firebase, Claude API) that turns described symptoms into ranked possible conditions, in Turkish. Built as an academic graduation project.
-*License:* none granted; contact me about terms of use.
-
-**[beamer-pc2](https://github.com/ErdemWilkinson/beamer-pc2)** — *fork of [Beamer](https://github.com/kalkman-code/beamer)*
-Beamer shares one keyboard and mouse across Macs, Windows PCs and Linux machines on the same network. My fork adds sending files, folders and app launches to the other PC so they open there on its own hardware (drag them onto the crossing edge, or right-click → "Open on …"), carrying a drag across to the other PC, smoother pointer motion over Wi-Fi, one-click updates from the fork, a Turkish translation and a one-line PowerShell installer for Windows. Everything else is upstream Beamer.
-*License:* GPL-3.0, inherited from upstream.
-
----
+- [turkish-asr-whisper](https://github.com/ErdemWilkinson/turkish-asr-whisper): pipeline for offline Turkish voice commands, whispered speech included. The dataset isn't recorded yet.
+- [Açık Masa](https://github.com/ErdemWilkinson/Frp_deneysel): an online D&D 5e table for a DM and a player (React, Node.js). Finished.
+- [evosim](https://github.com/ErdemWilkinson/evosim): an evolution simulation you can [play in the browser](https://erdemwilkinson.github.io/evosim/).
+- [Shaman](https://github.com/ErdemWilkinson/Shaman): Android app that ranks possible conditions from symptoms. My graduation project.
+- [beamer-pc2](https://github.com/ErdemWilkinson/beamer-pc2): my fork of [Beamer](https://github.com/kalkman-code/beamer) that sends files and apps to the other PC.
 
 ## Experience
 
-**Intern / Contractor — Software Developer**, OME Marketing (Dubai) — *2026*
-- Built "Onaylı Emlak," a real-estate marketplace app using Expo (React Native), Firebase, and iyzico payment integration
-
----
+**OME Marketing (Dubai)**, intern / contractor, 2026
+Built "Onaylı Emlak", a real-estate app (Expo, Firebase, iyzico).
 
 ## Skills
 
-**Embedded & ML**
-- C (ESP-IDF) • ESP32 • Arduino & circuit design
-- Python • TensorFlow / TFLite • int8 quantization & QAT
-
-**Software**
-- TypeScript/JavaScript • React • Node.js/Express • React Native (Expo)
-- WebSocket • PostgreSQL (Supabase)
-- Kotlin (Jetpack Compose) • Firebase
-- C# • .NET • Microsoft SQL Server • Java • C++
-
----
+- **Embedded and ML:** C (ESP-IDF), ESP32, Arduino, Python, TensorFlow / TFLite, int8 quantization
+- **Software:** TypeScript, React, Node.js, React Native (Expo), PostgreSQL (Supabase), Kotlin (Jetpack Compose), Firebase
 
 ## Education
 
-**Karadeniz Technical University**
-Associate Degree in Computer Programming • Trabzon, Turkey
+Karadeniz Technical University, Associate Degree in Computer Programming, Trabzon
 
----
+Turkish (native), English (professional). Outside of code I play Space Station 13.
 
-## Languages
-
-- Turkish (Native)
-- English (Professional Working Proficiency)
-
----
-
-## Connect
-
-Open to internships, junior roles and collaborations. The best way to reach me is through GitHub.
+I'm open to internships, junior roles and collaborations. The easiest way to reach me is here on GitHub.

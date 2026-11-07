@@ -10,14 +10,14 @@ I started with Arduino in the national "Kod Adı 2023" project. These days I'm w
 A DIY Flipper Zero-style handheld on a single ESP32-C6. The menu and the Wi-Fi and BLE tools run on the device. RFID and IR aren't tested on hardware yet.
 
 **[InviolusOCR](https://github.com/ErdemWilkinson/InviolusOCR)** · [Hugging Face](https://huggingface.co/inviolus/InviolusOCR)
-Reads one line of printed Turkish text. 598 KB as int8, and it reads 77.3% of held-out lines exactly (46.5% on printed-document lines, 56.2% on real scene text). There is also a 171 KB version.
+Reads one line of printed Turkish text. 598 KB as int8, and it reads 77.3% of held-out lines exactly (46.5% on printed-document lines, 56.2% on real scene text). There is also a 171 KB version, and a 298 KB pruned version is being tested.
 
 **[VoxHOD](https://github.com/ErdemWilkinson/VoxHOD)** · [Hugging Face](https://huggingface.co/inviolus/VoxHOD)
-Finds people in drone images, 197 KB as int8 for the ESP32-S3. It finds 83.9% of the people in the HERIDAL test set. The non-commercial branch [VoxHOD-NC](https://github.com/ErdemWilkinson/VoxHOD-NC) is also trained on Turkish drone footage by Ferhat Tatık ([@ferhattatik_dronoloji](https://www.instagram.com/ferhattatik_dronoloji/)). On that footage it finds 52.2% of people, up from 32.9%.
+Finds people in drone images, 197 KB as int8 for the ESP32-S3. It finds 83.9% of the people in the HERIDAL test set. The non-commercial branch [VoxHOD-NC](https://github.com/ErdemWilkinson/VoxHOD-NC) is also trained on Turkish drone footage by Ferhat Tatık ([@ferhattatik_dronoloji](https://www.instagram.com/ferhattatik_dronoloji/)). Its current version (v2) finds 62.2% of the people in that footage, against 32.9% for VoxHOD.
 
 ## Other projects
 
-- [turkish-asr-whisper](https://github.com/ErdemWilkinson/turkish-asr-whisper): pipeline for offline Turkish voice commands, whispered speech included. The dataset isn't recorded yet.
+- [turkish-asr-whisper](https://github.com/ErdemWilkinson/turkish-asr-whisper): pipeline for offline Turkish voice commands, whispered speech included. The command dataset isn't recorded yet; a small Turkish speech-recognition research baseline is on [Hugging Face](https://huggingface.co/inviolus/erdem-asr-tr-baseline).
 - [deneysel_teknik_destek](https://github.com/ErdemWilkinson/deneysel_teknik_destek): a USB support terminal for municipal IT. An ESP32-P4 tells the PC it's plugged in, and the technician opens a repair terminal where an AI agent can only call whitelisted tools and asks before changing anything.
 - [Açık Masa](https://github.com/ErdemWilkinson/Frp_deneysel): an online D&D 5e table for a DM and a player (React, Node.js). Finished.
 - [evosim](https://github.com/ErdemWilkinson/evosim): an evolution simulation you can [play in the browser](https://erdemwilkinson.github.io/evosim/).

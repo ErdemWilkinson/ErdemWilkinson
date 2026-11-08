@@ -10,7 +10,7 @@ I started with Arduino in the national "Kod Adı 2023" project. These days I'm w
 A DIY Flipper Zero-style handheld on a single ESP32-C6. The menu and the Wi-Fi and BLE tools run on the device. RFID and IR aren't tested on hardware yet.
 
 **[InviolusOCR](https://github.com/ErdemWilkinson/InviolusOCR)** · [Hugging Face](https://huggingface.co/inviolus/InviolusOCR)
-Reads one line of printed Turkish text. 598 KB as int8, and it reads 77.3% of held-out lines exactly (46.5% on printed-document lines, 56.2% on real scene text). There is also a 171 KB version, and a 298 KB pruned version is being tested.
+Reads one line of printed Turkish text, in three int8 sizes: Base (598 KB) reads 77.3% of held-out lines exactly (46.5% on printed-document lines, 56.2% on real scene text); Small (298 KB) and Nano (171 KB) are pruned from it and run in 760 ms and about 420 ms per line on an ESP32-P4.
 
 **[VoxHOD](https://github.com/ErdemWilkinson/VoxHOD)** · [Hugging Face](https://huggingface.co/inviolus/VoxHOD)
 Finds people in drone images, 197 KB as int8 for the ESP32-S3. It finds 83.9% of the people in the HERIDAL test set. The non-commercial branch [VoxHOD-NC](https://github.com/ErdemWilkinson/VoxHOD-NC) is also trained on Turkish drone footage by Ferhat Tatık ([@ferhattatik_dronoloji](https://www.instagram.com/ferhattatik_dronoloji/)). Its current version (v2) finds 62.2% of the people in that footage, against 32.9% for VoxHOD.

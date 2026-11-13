@@ -13,7 +13,10 @@ A DIY Flipper Zero-style handheld on a single ESP32-C6. The menu and the Wi-Fi a
 Reads one line of printed Turkish text, in three int8 sizes: Base (598 KB) reads 77.3% of held-out lines exactly (46.5% on printed-document lines, 56.2% on real scene text); Small (298 KB) and Nano (171 KB) are pruned from it and run in 760 ms and about 420 ms per line on an ESP32-P4.
 
 **[VoxHOD](https://github.com/ErdemWilkinson/VoxHOD)** · [Hugging Face](https://huggingface.co/inviolus/VoxHOD)
-Finds people in drone images, 197 KB as int8 for the ESP32-S3. It finds 83.9% of the people in the HERIDAL test set. The non-commercial branch [VoxHOD-NC](https://github.com/ErdemWilkinson/VoxHOD-NC) is also trained on Turkish drone footage by Ferhat Tatık ([@ferhattatik_dronoloji](https://www.instagram.com/ferhattatik_dronoloji/)). Its current version (v2) finds 62.2% of the people in that footage, against 32.9% for VoxHOD.
+Finds people in drone images, built and trained from scratch: 197 KB as int8 (v3), or 75 KB for the nano variant. v3 finds 83.9% of the people in the HERIDAL test set and runs in 321 ms per tile on an ESP32-P4 (nano 151 ms). The non-commercial branch [VoxHOD-NC](https://github.com/ErdemWilkinson/VoxHOD-NC) is also trained on Turkish drone footage by Ferhat Tatık ([@ferhattatik_dronoloji](https://www.instagram.com/ferhattatik_dronoloji/)). Its current version (v2) finds 62.2% of the people in that footage, against 32.9% for VoxHOD.
+
+**[VoxScout](https://github.com/ErdemWilkinson/VoxScout)** · [Hugging Face](https://huggingface.co/inviolus/VoxScout)
+VoxHOD's larger sibling, for a ground station or as a second stage rather than a microcontroller. It is built on Google's EfficientNet-B0 (ImageNet weights, Apache 2.0) with VoxHOD's head, data and training code, so it is a separate project. As a 5.2 MB int8 file it raises 4 to 5 times fewer false alarms than the VoxHOD nano recipe at the same recall. Device speed is not measured yet.
 
 ## Other projects
 
@@ -40,6 +43,6 @@ Karadeniz Technical University, Associate Degree in Computer Programming, Trabzo
 
 Turkish (native), English (professional). Outside of code I play Space Station 13.
 
-**Licenses:** code is MIT. Model weights keep the terms of their training data: VoxHOD is CC BY 4.0, VoxHOD-NC is CC BY-NC 4.0 and InviolusOCR is CC BY-NC-SA 4.0 (see each MODEL_LICENSE.md).
+**Licenses:** code in InviolusOCR, VoxHOD and VoxScout is Apache 2.0 with a NOTICE file (earlier commits MIT); other repositories are MIT. Model weights keep the terms of their training data: VoxHOD is CC BY 4.0, VoxScout is CC BY 4.0 (its backbone is Google's EfficientNet-B0, Apache 2.0), VoxHOD-NC is CC BY-NC 4.0 and InviolusOCR is CC BY-NC-SA 4.0 (see each MODEL_LICENSE.md).
 
 I'm open to internships, junior roles, freelance work and collaborations. The easiest way to reach me is here on GitHub.
